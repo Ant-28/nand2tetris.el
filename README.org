@@ -3,13 +3,30 @@
 [[http://melpa.org/#/nand2tetris][file:http://melpa.org/packages/nand2tetris-badge.svg]]
 
 The aim of this package is to be best emacs tool to accompany you on your
-nand2tetris journey [[https://www.coursera.org/course/nand2tetris1][in Coursera]], or the [[http://www.nand2tetris.org][Official Website for it]].
+nand2tetris journey [[https://www.coursera.org/course/nand2tetris1][in Coursera]], or the [[http://www.nand2tetris.org][Official Website for it]]. This config has been modified for DOOM emacs users.
+
+
 
  ~Only works on Linux/OSX...for now~ 
 
 **  Getting Started
 
-Set the path to your nand2tetris directory with e.g. =(setq nand2tetris-core-base-dir "~/nand2tetris")=.
+Set the path to your nand2tetris directory with e.g. =(setq nand2tetris-core-base-dir "~/nand2tetris")=. The original file is bugged so the add to list has to be added to `config.el` until I figure out how elisp works.
+
+#+begin_src elisp
+
+;; nand2tetris config
+ (use-package! nand2tetris
+  :init
+  (setq nand2tetris-core-base-dir "~/win_e/studies_other/nand2tetris/"))
+
+(add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode))
+
+
+
+
+#+end_src
+
 
 
 ** Goodies
