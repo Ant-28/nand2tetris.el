@@ -304,10 +304,10 @@ Interactively, prompt for symbol."
   (set (make-local-variable 'font-lock-defaults)
        `(,nand2tetris-font-lock-keywords nil nil nil nil)))
 
-;;;###autoload
-(add-to-list 'auto-mode-alist
-             `(,(concat (expand-file-name nand2tetris-core-base-dir) "\.*\\.hdl")
-               . 'nand2tetris-mode))
+;; ;;;###autoload
+;; (add-to-list 'auto-mode-alist
+;;              `(,(concat (expand-file-name nand2tetris-core-base-dir) "\.*\\.hdl")
+;;                . 'nand2tetris-mode))
 
 
 (provide 'nand2tetris)
